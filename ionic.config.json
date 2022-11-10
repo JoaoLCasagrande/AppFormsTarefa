@@ -1,0 +1,7 @@
+{
+  "name": "AppFormsTarefa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
