@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/semi */
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +9,11 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  formLogin = this.formBuilder.group({
+    email:['',Validators.compose([Validators.required,Validators.email])],
+    senha:['',Validators.compose([Validators.required,Validators.minLength(6)])],
+  })
+
+  constructor(private formBuilder: FormBuilder) {}
 
 }
